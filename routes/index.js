@@ -2,7 +2,7 @@ import express from 'express'
 import testRoutes from '../api/test/index.js';
 const routes = express.Router();
 
-routes.use('/', async (req, res) => {
+routes.get('/', async (req, res) => {
    
     res.send('Welcome to test api....');
 
