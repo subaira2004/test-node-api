@@ -8,6 +8,13 @@ routes.get('/', async (req, res) => {
 
 });
 
+routes.get('/echo', async (req, res) => {
+   const echoWord = req.query.q??"";
+
+    res.send(echoWord? `Echoing your input : ${echoWord}`:'your input is missing :(');
+
+});
+
 routes.use('/test', testRoutes);
 
 export default routes;  
